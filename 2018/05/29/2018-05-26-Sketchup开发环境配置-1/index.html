@@ -79,24 +79,17 @@
 
 
 
-<meta name="description" content="使用Thomthom的testup-2为例，下载源码，新建项目 让IDE识别Sketchup的APIIDE不能识别Sketchup的API，我们可以通过代理（stubs)让IDE识别API。 使用以下命令安装gem，或者下载ruby-api-stubs源码。 1gem install sketchup-api-stubs 使用gem很简单。在项目根目录下新建一个Gemfile，Rubymine会自">
+<meta name="description" content="开发第一步是代码版本管理，如果将开发中的项目直接放在Sketchup插件目录下，难免增加代码管理的难度。因此最好的方式是将插件源码放在自定义的项目路径下，并配置Sketchup加载该路径。 开发环境： macIDE: RubyMine 项目结构举例如下，假如你有如下的项目结构: 12345~/Source/ExampleExtension/.git/~/Source/ExampleExtensio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sketchup开发环境配置-Rubymine项目配置 (2)">
-<meta property="og:url" content="http://cgclip.com/2018/05/26/2018-05-26-Sketchup开发环境配置-2/index.html">
+<meta property="og:title" content="Sketchup开发环境配置 (1)">
+<meta property="og:url" content="http://cgclip.com/2018/05/29/2018-05-26-Sketchup开发环境配置-1/index.html">
 <meta property="og:site_name" content="曾大猫的Sketchup笔记">
-<meta property="og:description" content="使用Thomthom的testup-2为例，下载源码，新建项目 让IDE识别Sketchup的APIIDE不能识别Sketchup的API，我们可以通过代理（stubs)让IDE识别API。 使用以下命令安装gem，或者下载ruby-api-stubs源码。 1gem install sketchup-api-stubs 使用gem很简单。在项目根目录下新建一个Gemfile，Rubymine会自">
+<meta property="og:description" content="开发第一步是代码版本管理，如果将开发中的项目直接放在Sketchup插件目录下，难免增加代码管理的难度。因此最好的方式是将插件源码放在自定义的项目路径下，并配置Sketchup加载该路径。 开发环境： macIDE: RubyMine 项目结构举例如下，假如你有如下的项目结构: 12345~/Source/ExampleExtension/.git/~/Source/ExampleExtensio">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p99t48erf.bkt.clouddn.com/su-dev/Screen%20Shot%202018-05-26%20at%2016.43.41.png">
-<meta property="og:image" content="http://p99t48erf.bkt.clouddn.com/Screen%20Shot%202018-05-26%20at%2016.44.47.png">
-<meta property="og:image" content="http://p99t48erf.bkt.clouddn.com/su-dev/RubyMineFolderRightClick.png">
-<meta property="og:image" content="http://p99t48erf.bkt.clouddn.com/su-dev/RubyMine10.png">
-<meta property="og:image" content="http://p99t48erf.bkt.clouddn.com/su-dev/RubyMine11.png">
-<meta property="og:image" content="http://p99t48erf.bkt.clouddn.com/su-dev/Screen%20Shot%202018-05-26%20at%2017.55.48.png">
-<meta property="og:updated_time" content="2018-05-26T09:56:28.862Z">
+<meta property="og:updated_time" content="2018-05-29T09:50:13.848Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sketchup开发环境配置-Rubymine项目配置 (2)">
-<meta name="twitter:description" content="使用Thomthom的testup-2为例，下载源码，新建项目 让IDE识别Sketchup的APIIDE不能识别Sketchup的API，我们可以通过代理（stubs)让IDE识别API。 使用以下命令安装gem，或者下载ruby-api-stubs源码。 1gem install sketchup-api-stubs 使用gem很简单。在项目根目录下新建一个Gemfile，Rubymine会自">
-<meta name="twitter:image" content="http://p99t48erf.bkt.clouddn.com/su-dev/Screen%20Shot%202018-05-26%20at%2016.43.41.png">
+<meta name="twitter:title" content="Sketchup开发环境配置 (1)">
+<meta name="twitter:description" content="开发第一步是代码版本管理，如果将开发中的项目直接放在Sketchup插件目录下，难免增加代码管理的难度。因此最好的方式是将插件源码放在自定义的项目路径下，并配置Sketchup加载该路径。 开发环境： macIDE: RubyMine 项目结构举例如下，假如你有如下的项目结构: 12345~/Source/ExampleExtension/.git/~/Source/ExampleExtensio">
 
 
 
@@ -126,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://cgclip.com/2018/05/26/2018-05-26-Sketchup开发环境配置-2/"/>
+  <link rel="canonical" href="http://cgclip.com/2018/05/29/2018-05-26-Sketchup开发环境配置-1/"/>
 
 
 
 
 
-  <title>Sketchup开发环境配置-Rubymine项目配置 (2) | 曾大猫的Sketchup笔记</title>
+  <title>Sketchup开发环境配置 (1) | 曾大猫的Sketchup笔记</title>
   
 
 
@@ -259,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/05/26/2018-05-26-Sketchup开发环境配置-2/">
+    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/05/29/2018-05-26-Sketchup开发环境配置-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zdamao">
@@ -276,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Sketchup开发环境配置-Rubymine项目配置 (2)</h1>
+          <h1 class="post-title" itemprop="name headline">Sketchup开发环境配置 (1)</h1>
         
 
         <div class="post-meta">
@@ -288,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-26T17:56:28+08:00">
-                2018-05-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-29T17:50:13+08:00">
+                2018-05-29
               </time>
             
 
@@ -306,7 +299,7 @@
 
           
           
-             <span id="/2018/05/26/2018-05-26-Sketchup开发环境配置-2/" class="leancloud_visitors" data-flag-title="Sketchup开发环境配置-Rubymine项目配置 (2)">
+             <span id="/2018/05/29/2018-05-26-Sketchup开发环境配置-1/" class="leancloud_visitors" data-flag-title="Sketchup开发环境配置 (1)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -337,32 +330,18 @@
       
 
       
-        <p>使用Thomthom的<a href="https://github.com/SketchUp/testup-2" target="_blank" rel="noopener">testup-2</a>为例，下载源码，新建项目</p>
-<h2 id="让IDE识别Sketchup的API"><a href="#让IDE识别Sketchup的API" class="headerlink" title="让IDE识别Sketchup的API"></a>让IDE识别Sketchup的API</h2><p>IDE不能识别Sketchup的API，我们可以通过代理（stubs)让IDE识别API。</p>
-<p>使用以下命令安装gem，或者下载<a href="https://github.com/SketchUp/ruby-api-stubs" target="_blank" rel="noopener">ruby-api-stubs</a>源码。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install sketchup-api-stubs</span><br></pre></td></tr></table></figure>
-<p>使用gem很简单。在项目根目录下新建一个Gemfile，Rubymine会自动提示需要安装该gem。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> <span class="string">'https://rubygems.org'</span></span><br><span class="line"></span><br><span class="line">group :development <span class="keyword">do</span></span><br><span class="line">  gem <span class="string">'minitest'</span> <span class="comment"># Not needed for the stubs, but useful for tests.</span></span><br><span class="line">  gem <span class="string">'sketchup-api-stubs'</span></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<p>安装完成后，应该会看到IDE识别了大部分的Sketchup API。</p>
-<p>但是还有一些未识别的方法，它们来自Sketchup/Tools下的sketchup.rb文件，因此需要添加该文件夹到项目中。</p>
-<h2 id="添加-Content-Roots"><a href="#添加-Content-Roots" class="headerlink" title="添加 Content Roots"></a>添加 Content Roots</h2><p>访问Rubymine菜单：File &gt; Settings &gt; Project Structure</p>
-<p>点击按钮 +Add Content Roots, mac下的sketchup.rb默认路径在/Applications/SketchUp 2017/SketchUp.app/Contents/Resources/Content/Tools</p>
-<p><img src="http://p99t48erf.bkt.clouddn.com/su-dev/Screen%20Shot%202018-05-26%20at%2016.43.41.png" alt="screenshot"></p>
-<p>查看左侧导航窗口，Tools文件夹已被加入到项目中。</p>
-<p><img src="http://p99t48erf.bkt.clouddn.com/Screen%20Shot%202018-05-26%20at%2016.44.47.png" alt="screenshot"></p>
-<h2 id="标记Exclusions"><a href="#标记Exclusions" class="headerlink" title="标记Exclusions"></a>标记Exclusions</h2><p>为了将Sketchup的加载路径从标准ruby安装中区分开来，我们需要用到Rubymine的标记功能。同时也将不需要解析的文件夹标记出来。</p>
-<p>windows系统下，需要将Tools/RubyStdLib文件标记为Excluded。</p>
-<p><img src="http://p99t48erf.bkt.clouddn.com/su-dev/RubyMineFolderRightClick.png" alt="screenshot"></p>
-<p><img src="http://p99t48erf.bkt.clouddn.com/su-dev/RubyMine10.png" alt="screenshot"></p>
-<p>将不需要解析的文件夹testup-2/ruby-c-extension folder也标记出来。</p>
-<h2 id="标记Test-Sources-Roots"><a href="#标记Test-Sources-Roots" class="headerlink" title="标记Test Sources Roots"></a>标记Test Sources Roots</h2><p>将tests文件夹下的子文件夹标记为Test Sources Roots，这样可以用到IDE的自动补齐和提示功能。</p>
-<p><img src="http://p99t48erf.bkt.clouddn.com/su-dev/RubyMine11.png" alt="screenshot"></p>
-<h2 id="标记Load-Path-Roots"><a href="#标记Load-Path-Roots" class="headerlink" title="标记Load Path Roots"></a>标记Load Path Roots</h2><p>为了方便调试，将以下两个文件夹标记为Load Path Root。</p>
-<p>testup-2/src</p>
-<p>Tools/</p>
-<p>最后，整个项目的结构如下。</p>
-<p><img src="http://p99t48erf.bkt.clouddn.com/su-dev/Screen%20Shot%202018-05-26%20at%2017.55.48.png" alt="screenshot"></p>
-
+        <p>开发第一步是代码版本管理，如果将开发中的项目直接放在Sketchup插件目录下，难免增加代码管理的难度。因此最好的方式是将插件源码放在自定义的项目路径下，并配置Sketchup加载该路径。</p>
+<p>开发环境： mac<br>IDE: RubyMine</p>
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p>举例如下，假如你有如下的项目结构:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~/Source/ExampleExtension/.git/</span><br><span class="line">~/Source/ExampleExtension/.gitignore</span><br><span class="line">~/Source/ExampleExtension/src/hello.rb</span><br><span class="line">~/Source/ExampleExtension/src/hello/main.rb</span><br><span class="line">~/Source/ExampleExtension/tests/</span><br></pre></td></tr></table></figure>
+<p>为了让Sketchup加载本项目，需将自定义路径增加到$LOAD_PATH中。</p>
+<p>在Sketchup插件目录下增加一个文件，文件名为!external.rb, 文件中指定了新增的自定义路径。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">SOURCE = File.join(ENV[<span class="string">"HOME"</span>], <span class="string">"Source"</span>).freeze</span><br><span class="line"></span><br><span class="line">paths = [</span><br><span class="line">  <span class="string">"#&#123;SOURCE&#125;/ExampleExtension/src"</span>,</span><br><span class="line">  <span class="comment"># Add more as needed here...</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Un-comment if you want to see any potential loading errors in the Ruby</span></span><br><span class="line"><span class="comment"># Console:</span></span><br><span class="line"><span class="comment"># SKETCHUP_CONSOLE.show</span></span><br><span class="line"></span><br><span class="line">paths.each &#123; |path|</span><br><span class="line">  <span class="variable">$LOAD_PATH</span> &lt;&lt; path</span><br><span class="line">  Dir.glob(<span class="string">"#&#123;path&#125;/*.&#123;rb,rbs,rbe&#125;"</span>) &#123; |file|</span><br><span class="line">    Sketchup.require(file)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="免重启Sketchup加载插件"><a href="#免重启Sketchup加载插件" class="headerlink" title="免重启Sketchup加载插件"></a>免重启Sketchup加载插件</h3><p>If you don’t make changes to menus, toolbar or class inheritance you can in most cases reload extensions without having to restart SketchUp between every change.</p>
+<p>One way to make it easier to reload the whole extension is adding a small utility method that you can call from the Ruby Console:</p>
+<p>如果你没有修改菜单、工具栏和class，大多数时候你可以重新加载插件而不用重启Sketchup。</p>
+<p>在项目中新增一个文件，路径和文件名请看代码第一行注释。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/Source/ExampleExtension/src/hello/debug.rb</span></span><br><span class="line">module Example::HelloWorld</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Reload extension by running this method from the Ruby Console:</span></span><br><span class="line">  <span class="comment">#   Example::HelloWorld.reload</span></span><br><span class="line">  def self.reload</span><br><span class="line">    original_verbose = <span class="variable">$VERBOSE</span></span><br><span class="line">    <span class="variable">$VERBOSE</span> = nil</span><br><span class="line">    pattern = File.join(__dir__, <span class="string">'**/*.rb'</span>)</span><br><span class="line">    Dir.glob(pattern).each &#123; |file|</span><br><span class="line">      <span class="comment"># Cannot use `Sketchup.load` because its an alias for `Sketchup.require`.</span></span><br><span class="line">      load file</span><br><span class="line">    &#125;.size</span><br><span class="line">  ensure</span><br><span class="line">    <span class="variable">$VERBOSE</span> = original_verbose</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">end <span class="comment"># module</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -386,8 +365,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/26/2018-05-26-Sketchup开发环境配置-1/" rel="next" title="Sketchup开发环境配置 (1)">
-                <i class="fa fa-chevron-left"></i> Sketchup开发环境配置 (1)
+              <a href="/2018/05/29/2018-05-26-Sketchup开发环境配置-3/" rel="next" title="Sketchup开发环境配置-RubyMine调试配置 (3)">
+                <i class="fa fa-chevron-left"></i> Sketchup开发环境配置-RubyMine调试配置 (3)
               </a>
             
           </div>
@@ -396,8 +375,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/27/2018-05-26-Sketchup开发环境配置-3/" rel="prev" title="Sketchup开发环境配置-Rubymine调试配置 (3)">
-                Sketchup开发环境配置-Rubymine调试配置 (3) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/29/2018-05-26-Sketchup开发环境配置-2/" rel="prev" title="Sketchup开发环境配置-RubyMine项目配置 (2)">
+                Sketchup开发环境配置-RubyMine项目配置 (2) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -479,7 +458,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -516,7 +495,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#让IDE识别Sketchup的API"><span class="nav-number">1.</span> <span class="nav-text">让IDE识别Sketchup的API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-Content-Roots"><span class="nav-number">2.</span> <span class="nav-text">添加 Content Roots</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标记Exclusions"><span class="nav-number">3.</span> <span class="nav-text">标记Exclusions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标记Test-Sources-Roots"><span class="nav-number">4.</span> <span class="nav-text">标记Test Sources Roots</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标记Load-Path-Roots"><span class="nav-number">5.</span> <span class="nav-text">标记Load Path Roots</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目结构"><span class="nav-number">1.</span> <span class="nav-text">项目结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#免重启Sketchup加载插件"><span class="nav-number">1.1.</span> <span class="nav-text">免重启Sketchup加载插件</span></a></li></ol></li></ol></div>
             
 
           </div>

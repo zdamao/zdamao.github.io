@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="开发第一步是代码版本管理，如果将开发中的项目直接放在Sketchup插件目录下，难免增加代码管理的难度。因此最好的方式是将插件源码放在自定义的项目路径下，并配置Sketchup加载该路径。 开发环境： macIDE: Rubymine 项目结构举例如下，假如你有如下的项目结构: 12345~/Source/ExampleExtension/.git/~/Source/ExampleExtensio">
+<meta name="description" content="he Ruby language is very easy to extend to suit your needs. Some very pretty looking code can be written. However, when you write plugins for SketchUp’s Ruby API you should be careful. The environment">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sketchup开发环境配置 (1)">
-<meta property="og:url" content="http://cgclip.com/2018/05/26/2018-05-26-Sketchup开发环境配置-1/index.html">
+<meta property="og:title" content="Sketchup插件开发需要牢记的黄金规则">
+<meta property="og:url" content="http://cgclip.com/2018/05/30/2018-05-30-Sketchup插件开发需要牢记的黄金规则/index.html">
 <meta property="og:site_name" content="曾大猫的Sketchup笔记">
-<meta property="og:description" content="开发第一步是代码版本管理，如果将开发中的项目直接放在Sketchup插件目录下，难免增加代码管理的难度。因此最好的方式是将插件源码放在自定义的项目路径下，并配置Sketchup加载该路径。 开发环境： macIDE: Rubymine 项目结构举例如下，假如你有如下的项目结构: 12345~/Source/ExampleExtension/.git/~/Source/ExampleExtensio">
+<meta property="og:description" content="he Ruby language is very easy to extend to suit your needs. Some very pretty looking code can be written. However, when you write plugins for SketchUp’s Ruby API you should be careful. The environment">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-26T03:00:06.199Z">
+<meta property="og:updated_time" content="2018-05-30T04:04:19.719Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sketchup开发环境配置 (1)">
-<meta name="twitter:description" content="开发第一步是代码版本管理，如果将开发中的项目直接放在Sketchup插件目录下，难免增加代码管理的难度。因此最好的方式是将插件源码放在自定义的项目路径下，并配置Sketchup加载该路径。 开发环境： macIDE: Rubymine 项目结构举例如下，假如你有如下的项目结构: 12345~/Source/ExampleExtension/.git/~/Source/ExampleExtensio">
+<meta name="twitter:title" content="Sketchup插件开发需要牢记的黄金规则">
+<meta name="twitter:description" content="he Ruby language is very easy to extend to suit your needs. Some very pretty looking code can be written. However, when you write plugins for SketchUp’s Ruby API you should be careful. The environment">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://cgclip.com/2018/05/26/2018-05-26-Sketchup开发环境配置-1/"/>
+  <link rel="canonical" href="http://cgclip.com/2018/05/30/2018-05-30-Sketchup插件开发需要牢记的黄金规则/"/>
 
 
 
 
 
-  <title>Sketchup开发环境配置 (1) | 曾大猫的Sketchup笔记</title>
+  <title>Sketchup插件开发需要牢记的黄金规则 | 曾大猫的Sketchup笔记</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/05/26/2018-05-26-Sketchup开发环境配置-1/">
+    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/05/30/2018-05-30-Sketchup插件开发需要牢记的黄金规则/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zdamao">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Sketchup开发环境配置 (1)</h1>
+          <h1 class="post-title" itemprop="name headline">Sketchup插件开发需要牢记的黄金规则</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-26T11:00:06+08:00">
-                2018-05-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-30T12:04:19+08:00">
+                2018-05-30
               </time>
             
 
@@ -299,7 +299,7 @@
 
           
           
-             <span id="/2018/05/26/2018-05-26-Sketchup开发环境配置-1/" class="leancloud_visitors" data-flag-title="Sketchup开发环境配置 (1)">
+             <span id="/2018/05/30/2018-05-30-Sketchup插件开发需要牢记的黄金规则/" class="leancloud_visitors" data-flag-title="Sketchup插件开发需要牢记的黄金规则">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -330,18 +330,18 @@
       
 
       
-        <p>开发第一步是代码版本管理，如果将开发中的项目直接放在Sketchup插件目录下，难免增加代码管理的难度。因此最好的方式是将插件源码放在自定义的项目路径下，并配置Sketchup加载该路径。</p>
-<p>开发环境： mac<br>IDE: Rubymine</p>
-<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p>举例如下，假如你有如下的项目结构:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~/Source/ExampleExtension/.git/</span><br><span class="line">~/Source/ExampleExtension/.gitignore</span><br><span class="line">~/Source/ExampleExtension/src/hello.rb</span><br><span class="line">~/Source/ExampleExtension/src/hello/main.rb</span><br><span class="line">~/Source/ExampleExtension/tests/</span><br></pre></td></tr></table></figure>
-<p>为了让Sketchup加载本项目，需将自定义路径增加到$LOAD_PATH中。</p>
-<p>在Sketchup插件目录下增加一个文件，文件名为!external.rb, 文件中指定了新增的自定义路径。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">SOURCE = File.join(ENV[<span class="string">"HOME"</span>], <span class="string">"Source"</span>).freeze</span><br><span class="line"></span><br><span class="line">paths = [</span><br><span class="line">  <span class="string">"#&#123;SOURCE&#125;/ExampleExtension/src"</span>,</span><br><span class="line">  <span class="comment"># Add more as needed here...</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Un-comment if you want to see any potential loading errors in the Ruby</span></span><br><span class="line"><span class="comment"># Console:</span></span><br><span class="line"><span class="comment"># SKETCHUP_CONSOLE.show</span></span><br><span class="line"></span><br><span class="line">paths.each &#123; |path|</span><br><span class="line">  <span class="variable">$LOAD_PATH</span> &lt;&lt; path</span><br><span class="line">  Dir.glob(<span class="string">"#&#123;path&#125;/*.&#123;rb,rbs,rbe&#125;"</span>) &#123; |file|</span><br><span class="line">    Sketchup.require(file)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="免重启Sketchup加载插件"><a href="#免重启Sketchup加载插件" class="headerlink" title="免重启Sketchup加载插件"></a>免重启Sketchup加载插件</h3><p>If you don’t make changes to menus, toolbar or class inheritance you can in most cases reload extensions without having to restart SketchUp between every change.</p>
-<p>One way to make it easier to reload the whole extension is adding a small utility method that you can call from the Ruby Console:</p>
-<p>如果你没有修改菜单、工具栏和class，大多数时候你可以重新加载插件而不用重启Sketchup。</p>
-<p>在项目中新增一个文件，路径和文件名请看代码第一行注释。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/Source/ExampleExtension/src/hello/debug.rb</span></span><br><span class="line">module Example::HelloWorld</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Reload extension by running this method from the Ruby Console:</span></span><br><span class="line">  <span class="comment">#   Example::HelloWorld.reload</span></span><br><span class="line">  def self.reload</span><br><span class="line">    original_verbose = <span class="variable">$VERBOSE</span></span><br><span class="line">    <span class="variable">$VERBOSE</span> = nil</span><br><span class="line">    pattern = File.join(__dir__, <span class="string">'**/*.rb'</span>)</span><br><span class="line">    Dir.glob(pattern).each &#123; |file|</span><br><span class="line">      <span class="comment"># Cannot use `Sketchup.load` because its an alias for `Sketchup.require`.</span></span><br><span class="line">      load file</span><br><span class="line">    &#125;.size</span><br><span class="line">  ensure</span><br><span class="line">    <span class="variable">$VERBOSE</span> = original_verbose</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">end <span class="comment"># module</span></span><br></pre></td></tr></table></figure>
+        <p>he Ruby language is very easy to extend to suit your needs. Some very pretty looking code can be written.</p>
+<p>However, when you write plugins for SketchUp’s Ruby API you should be careful. The environment is shared between all plugins, so there is a good risk of clashes if you do not “play nice”. Here’s an overview of important points to remember when you develop plugins for Google SketchUp.</p>
+<p>Ruby代码简洁优雅，不过在写Sketchup插件时需要小心，因为所有的插件都共享一个工作环境。以下是你在撰写Sketchup插件是需要牢记的重要规则。</p>
+<h2 id="一、永远不要修改Sketchup内已经存在的基本方法"><a href="#一、永远不要修改Sketchup内已经存在的基本方法" class="headerlink" title="一、永远不要修改Sketchup内已经存在的基本方法"></a>一、永远不要修改Sketchup内已经存在的基本方法</h2><p>What to do instead? Just accept that the code needs some extra syntax and keep your improved method within your own namespace.</p>
+<p>修改Sketchup的基本方法或许有利于实现你的插件功能，但是如果其他插件也依赖于同样的基本方法，其他插件的行为将不可预测。</p>
+<p>替代办法是，接受稍微复杂的语句，并将你增强的方法写在自己的命名空间以内。</p>
+<h2 id="二、避免给全局命名空间增加方法"><a href="#二、避免给全局命名空间增加方法" class="headerlink" title="二、避免给全局命名空间增加方法"></a>二、避免给全局命名空间增加方法</h2><p>f you write a plugin without wrapping the code in a module or class you are actually adding the methods to the Kernel class. Since every class inherit Object, and Object inherit Kernel, these methods becomes available to all other classes. Causing potential for conflict everywhere.<br>如果没有将代码包裹在module或class中，就等于你在给Sketchup核心类（kernel class）增加方法，所有类都继承自object类，而object类继承自kernel class，你就造成了全局污染，带来了潜在的冲突风险。</p>
+<h2 id="三、避免全局变量"><a href="#三、避免全局变量" class="headerlink" title="三、避免全局变量"></a>三、避免全局变量</h2><p>同样的原因，也应该避免全局变量和全局常量。</p>
+<h2 id="四、避免扩展基本类-base-classes-和基本模块-base-modules"><a href="#四、避免扩展基本类-base-classes-和基本模块-base-modules" class="headerlink" title="四、避免扩展基本类(base classes)和基本模块(base modules)"></a>四、避免扩展基本类(base classes)和基本模块(base modules)</h2><p>扩展基本类和模块可能会写出优雅的代码，但是它同样造成了全局命名空间的问题，所以需要克制。</p>
+<h2 id="四、保留在安全地带"><a href="#四、保留在安全地带" class="headerlink" title="四、保留在安全地带"></a>四、保留在安全地带</h2><p>Due to the shared nature of SketchUp’s Ruby API environment, the safest way to avoid clashes is to wrap all your code in a carefully picked namespace which you hope will be unique. Over at SketchUcation the common convention is for developers to use their initials as prefixes for the root namespaces they use for their plugins.</p>
+<p>由于Sketchup的Ruby API环境被共享，最安全的方法是将所有代码包裹在一个唯一的命名空间中。通常的做法是在根命名空间上增加一个前缀，这个前缀可以是开发者的名字首字母，比如我是zdamao, 我的插件名字就是ZDAMAO_MyNewCoolPlugin。</p>
+<h2 id="五、一段”安全”的代码示例"><a href="#五、一段”安全”的代码示例" class="headerlink" title="五、一段”安全”的代码示例"></a>五、一段”安全”的代码示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">require <span class="string">'sketchup.rb'</span></span><br><span class="line">module ZDAMAO_MyOwnUniqueNamespace</span><br><span class="line">  unless file_loaded?( __FILE__ )</span><br><span class="line">    menu = UI.menu( <span class="string">'Plugins'</span> )</span><br><span class="line">    menu.add_item( <span class="string">'Hello World'</span> ) &#123; self.hello_world &#125;</span><br><span class="line">  end</span><br><span class="line">  <span class="comment"># Use instance variables inside modules instead of global variables.</span></span><br><span class="line">  @my_variable = <span class="string">'Hi there! :)'</span></span><br><span class="line">  def self.hello_world</span><br><span class="line">    puts @my_variable</span><br><span class="line">  end</span><br><span class="line">  file_loaded( __FILE__ )</span><br><span class="line">end <span class="comment"># module</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -365,15 +365,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/29/2018-05-26-Sketchup开发环境配置-2/" rel="next" title="Sketchup开发环境配置-RubyMine项目配置 (2)">
+                <i class="fa fa-chevron-left"></i> Sketchup开发环境配置-RubyMine项目配置 (2)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/26/2018-05-26-Sketchup开发环境配置-2/" rel="prev" title="Sketchup开发环境配置-Rubymine项目配置 (2)">
-                Sketchup开发环境配置-Rubymine项目配置 (2) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -454,7 +454,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -491,7 +491,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目结构"><span class="nav-number">1.</span> <span class="nav-text">项目结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#免重启Sketchup加载插件"><span class="nav-number">1.1.</span> <span class="nav-text">免重启Sketchup加载插件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、永远不要修改Sketchup内已经存在的基本方法"><span class="nav-number">1.</span> <span class="nav-text">一、永远不要修改Sketchup内已经存在的基本方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、避免给全局命名空间增加方法"><span class="nav-number">2.</span> <span class="nav-text">二、避免给全局命名空间增加方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、避免全局变量"><span class="nav-number">3.</span> <span class="nav-text">三、避免全局变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、避免扩展基本类-base-classes-和基本模块-base-modules"><span class="nav-number">4.</span> <span class="nav-text">四、避免扩展基本类(base classes)和基本模块(base modules)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、保留在安全地带"><span class="nav-number">5.</span> <span class="nav-text">四、保留在安全地带</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、一段”安全”的代码示例"><span class="nav-number">6.</span> <span class="nav-text">五、一段”安全”的代码示例</span></a></li></ol></div>
             
 
           </div>
