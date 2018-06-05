@@ -249,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/06/05/2018-06-05-Sketchup插件开发路径/">
+    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/06/05/2018-06-05-自定义Sketchup插件开发路径/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zdamao">
@@ -268,7 +268,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/05/2018-06-05-Sketchup插件开发路径/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2018/06/05/2018-06-05-自定义Sketchup插件开发路径/" itemprop="url">自定义Sketchup插件安装路径</a></h1>
         
 
         <div class="post-meta">
@@ -280,7 +280,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-05T16:03:17+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-05T21:37:42+08:00">
                 2018-06-05
               </time>
             
@@ -298,7 +298,7 @@
 
           
           
-             <span id="/2018/06/05/2018-06-05-Sketchup插件开发路径/" class="leancloud_visitors" data-flag-title="">
+             <span id="/2018/06/05/2018-06-05-自定义Sketchup插件开发路径/" class="leancloud_visitors" data-flag-title="自定义Sketchup插件安装路径">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -331,12 +331,159 @@
       
         
           
-            <p>Sketchup插件并非一定要放到默认的插件路径下。</p>
+            <p>对于终端用户来说，通过引用自定义路径的插件文件夹有诸多好处，这样多个版本的Sketchup可共用插件。还可以使用Dropbox、坚果云等网盘工具进行管理，实现在多台主机上共享插件。这给个人或团队工作都提供了便利。</p>
+<p>Fredo开发的插件（<a href="https://sketchucation.com/forums/viewtopic.php?t=39073" target="_blank" rel="noopener">!AdditionalPluginFolders</a>）可以很容易自定义路径安装插件，</p>
+<p>而对于Sketchup插件开发者来说，将代码放到插件默认安装路径之外差不多是必须的，因为这样能方便代码调试和版本管理。</p>
 <p>一种常见的做法是将插件放在一个外部的共享文件夹中，并在Sketchup插件的默认安装路径通过一个脚本文件，引用加载外部文件夹。</p>
-<p>这样做的好处是，通过引用外部文件，多个版本的Sketchup可共用插件。还可以使用Dropbox、坚果云等网盘工具进行管理，实现在多台主机上共享插件。这对插件使用和插件开发都非常有利。</p>
 <p>通过外部文件配置插件路径的问题是，你编写的插件中不能使用<code>Sketchup.find_support_file</code>，替代方案是使用<code>__FILE__</code> 常量，<code>__FILE__</code> 保存着插件执行文件的路径和文件名。通过<code>File.dirname( __FILE__ )</code>可以获取插件执行文件的路径值。按照这种模式编写的插件，具有可移动性，可以安装在任意自定义路径下。</p>
 <p>另外需要注意的是，如果你的Ruby代码是加密脚本， <code>__FILE__</code> 就获取不到正确的文件信息，因为ruby脚本会在解码再被赋值执行。因此，我们还需要遵循另一个原则，使用一个非加密脚本（unscrambled loader）加载插件，这个脚本将实例或类的路径保存在模块的根结构下，可以供加密文件使用，查找到插件的根目录（base path of the plugin）。</p>
+<!--http://www.thomthom.net/thoughts/2012/09/sketchup-plugins-can-be-installed-anywhere/-->
+          
+        
+      
+    </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/06/05/2018-06-05-Sketchup插件开发的checklist/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zdamao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p99t48erf.bkt.clouddn.com/share/avatar-zwy.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曾大猫的Sketchup笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/05/2018-06-05-Sketchup插件开发的checklist/" itemprop="url">Sketchup插件开发的checklist</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-05T21:37:42+08:00">
+                2018-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/06/05/2018-06-05-Sketchup插件开发的checklist/" class="leancloud_visitors" data-flag-title="Sketchup插件开发的checklist">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ThomThom总结了他的插件开发经验，归纳成类，对插件开发很有参考价值。</p>
+<p>之前已经用单独文章说明的相关内容，本文也给出了链接地址。</p>
+<h2 id="稳定性："><a href="#稳定性：" class="headerlink" title="稳定性："></a>稳定性：</h2><ul>
+<li><a href="http://www.thomthom.net/thoughts/2012/01/golden-rules-of-sketchup-plugin-development/#never-modify-existing-base-methods-that-ships-with-sketchup" target="_blank" rel="noopener">Ensure base classes, modules and methods are not modified</a></li>
+<li><a href="http://www.thomthom.net/thoughts/2012/01/golden-rules-of-sketchup-plugin-development/#avoid-adding-methods-to-the-global-namespace" target="_blank" rel="noopener">Wrap <em>everything</em> in a unique namespace</a></li>
+<li><a href="http://www.thomthom.net/thoughts/2012/09/sketchup-plugins-can-be-installed-anywhere/" target="_blank" rel="noopener">Ensure the plugin can run from any file location</a></li>
+<li>Ensure plugins, especially beware observers, doesn’t mess up the undo stack</li>
+<li><a href="https://github.com/SketchUp/sketchup-safe-observer-events" target="_blank" rel="noopener">Ensure observers doesn’t interrupt operations</a></li>
+<li>Keep support files grouped in a folder, not flat in the Plugins root</li>
+</ul>
+<p>避免修改Sketchup内已经存在的基本类、模块和方法</p>
+<p>将代码包裹在唯一的命名空间中</p>
+<p>确保插件能够在自定义目录加载</p>
+<p>确保观察者不会破坏undo操作</p>
+<p>确保观察者不会破坏操作流程</p>
+<p>不要将插件用到的支持文件放置到根目录下，应该统一放在子文件夹下</p>
+<h2 id="行为"><a href="#行为" class="headerlink" title="行为"></a>行为</h2><!--http://www.thomthom.net/thoughts/2013/02/sketchup-plugin-checklist/-->
           
         
       
@@ -609,8 +756,9 @@
 <h2 id="二、避免给全局命名空间增加方法"><a href="#二、避免给全局命名空间增加方法" class="headerlink" title="二、避免给全局命名空间增加方法"></a>二、避免给全局命名空间增加方法</h2><p>如果没有将代码包裹在module或class中，就等于你在给Sketchup核心类（kernel class）增加方法，所有类都继承自object类，而object类继承自kernel class，你就造成了全局污染，带来了潜在的冲突风险。</p>
 <h2 id="三、避免全局变量"><a href="#三、避免全局变量" class="headerlink" title="三、避免全局变量"></a>三、避免全局变量</h2><p>同样的原因，也应该避免全局变量和全局常量。</p>
 <h2 id="四、避免扩展基本类-base-classes-和基本模块-base-modules"><a href="#四、避免扩展基本类-base-classes-和基本模块-base-modules" class="headerlink" title="四、避免扩展基本类(base classes)和基本模块(base modules)"></a>四、避免扩展基本类(base classes)和基本模块(base modules)</h2><p>扩展基本类和模块可能会写出优雅的代码，但是它同样造成了全局命名空间的问题，所以需要克制。</p>
-<h2 id="四、强迫自己呆在安全地带"><a href="#四、强迫自己呆在安全地带" class="headerlink" title="四、强迫自己呆在安全地带"></a>四、强迫自己呆在安全地带</h2><p>由于Sketchup的Ruby API环境被共享，最安全的方法是将所有代码包裹在一个唯一的命名空间中。通常的做法是在根命名空间上增加一个前缀，这个前缀可以是开发者的名字首字母，比如我的名字是zdamao, 我的插件就叫 ZDAMAO_MyNewCoolPlugin。</p>
+<h2 id="四、将代码包裹在唯一的命名空间中"><a href="#四、将代码包裹在唯一的命名空间中" class="headerlink" title="四、将代码包裹在唯一的命名空间中"></a>四、将代码包裹在唯一的命名空间中</h2><p>由于Sketchup的Ruby API环境被共享，最安全的方法是将所有代码包裹在一个唯一的命名空间中。通常的做法是在根命名空间上增加一个前缀，这个前缀可以是开发者的名字首字母，比如我的名字是zdamao, 我的插件就叫 ZDAMAO_MyNewCoolPlugin。</p>
 <h2 id="五、一段”安全”的代码示例"><a href="#五、一段”安全”的代码示例" class="headerlink" title="五、一段”安全”的代码示例"></a>五、一段”安全”的代码示例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">require <span class="string">'sketchup.rb'</span></span><br><span class="line">module ZDAMAO_MyOwnUniqueNamespace</span><br><span class="line">  unless file_loaded?( __FILE__ )</span><br><span class="line">    menu = UI.menu( <span class="string">'Plugins'</span> )</span><br><span class="line">    menu.add_item( <span class="string">'Hello World'</span> ) &#123; self.hello_world &#125;</span><br><span class="line">  end</span><br><span class="line">  <span class="comment"># Use instance variables inside modules instead of global variables.</span></span><br><span class="line">  @my_variable = <span class="string">'Hi there! :)'</span></span><br><span class="line">  def self.hello_world</span><br><span class="line">    puts @my_variable</span><br><span class="line">  end</span><br><span class="line">  file_loaded( __FILE__ )</span><br><span class="line">end <span class="comment"># module</span></span><br></pre></td></tr></table></figure>
+<!--http://www.thomthom.net/thoughts/2012/01/golden-rules-of-sketchup-plugin-development/#never-modify-existing-base-methods-that-ships-with-sketchup-->
           
         
       
@@ -1168,7 +1316,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
