@@ -249,6 +249,305 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/06/11/2018-06-05-Sketchup插件开发的checklist/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zdamao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p99t48erf.bkt.clouddn.com/share/avatar-zwy.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曾大猫的Sketchup笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/11/2018-06-05-Sketchup插件开发的checklist/" itemprop="url">Sketchup插件开发的checklist</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-11T15:36:41+08:00">
+                2018-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/06/11/2018-06-05-Sketchup插件开发的checklist/" class="leancloud_visitors" data-flag-title="Sketchup插件开发的checklist">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ThomThom总结了他的插件开发经验，归纳成类，对插件开发很有参考价值。</p>
+<p>之前已经用单独文章说明的相关内容，本文也给出了链接地址。</p>
+<h2 id="稳定性："><a href="#稳定性：" class="headerlink" title="稳定性："></a>稳定性：</h2><ul>
+<li><a href="user/repo/blob/branch/test.md">避免修改Sketchup内已经存在的基本类、模块和方法</a></li>
+<li>将代码包裹在唯一的命名空间中</li>
+<li>确保插件能够在自定义目录加载</li>
+<li>确保观察者不会破坏undo操作</li>
+<li>确保观察者不会破坏操作流程</li>
+<li>不要将插件用到的支持文件放置到根目录下，应该统一放在子文件夹下</li>
+</ul>
+<h2 id="行为"><a href="#行为" class="headerlink" title="行为"></a>行为</h2><ul>
+<li>保持undo操作流程清晰</li>
+<li>让Sketchup处理尺寸单位问题</li>
+<li>尊重隐藏元素、隐藏层和锁定标签</li>
+<li>记住不是所有的定义都是组件</li>
+<li>群组可以有多个实例，确定被编辑的组的唯一性</li>
+</ul>
+<h2 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h2><ul>
+<li>避免不必要的界面刷新</li>
+<li>Ensure all validation procs does absolute minimum</li>
+<li>Ensure observers does absolute minimum</li>
+<li>避免使用Entity.typename, 使用Entity.is_a?</li>
+<li>避免使用String，使用Symbols</li>
+<li>尽量使用Sketchup API中的方法</li>
+<li>使用bulk操作方法</li>
+<li>使用对快捷键友好的动作名称</li>
+<li>Cache计算结果</li>
+<li>使用Hash</li>
+</ul>
+<h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><ul>
+<li>将插件打包程rbz安装包</li>
+<li>执行SketchupExtension类</li>
+</ul>
+<!--http://www.thomthom.net/thoughts/2013/02/sketchup-plugin-checklist/-->
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/06/05/test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zdamao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p99t48erf.bkt.clouddn.com/share/avatar-zwy.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曾大猫的Sketchup笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/05/test/" itemprop="url">自定义Sketchup插件安装路径</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-05T21:41:12+08:00">
+                2018-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/06/05/test/" class="leancloud_visitors" data-flag-title="自定义Sketchup插件安装路径">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>对于终端用户来说，通过引用自定义路径的插件文件夹有诸多好处，这样多个版本的Sketchup可共用插件。还可以使用Dropbox、坚果云等网盘工具进行管理，实现在多台主机上共享插件。这给个人或团队工作都提供了便利。</p>
+<p>Fredo开发的插件（<a href="https://sketchucation.com/forums/viewtopic.php?t=39073" target="_blank" rel="noopener">!AdditionalPluginFolders</a>）可以很容易自定义路径安装插件，</p>
+<p>而对于Sketchup插件开发者来说，将代码放到插件默认安装路径之外差不多是必须的，因为这样能方便代码调试和版本管理。</p>
+<p>一种常见的做法是将插件放在一个外部的共享文件夹中，并在Sketchup插件的默认安装路径通过一个脚本文件，引用加载外部文件夹。</p>
+<p>通过外部文件配置插件路径的问题是，你编写的插件中不能使用<code>Sketchup.find_support_file</code>，替代方案是使用<code>__FILE__</code> 常量，<code>__FILE__</code> 保存着插件执行文件的路径和文件名。通过<code>File.dirname( __FILE__ )</code>可以获取插件执行文件的路径值。按照这种模式编写的插件，具有可移动性，可以安装在任意自定义路径下。</p>
+<p>另外需要注意的是，如果你的Ruby代码是加密脚本， <code>__FILE__</code> 就获取不到正确的文件信息，因为ruby脚本会在解码再被赋值执行。因此，我们还需要遵循另一个原则，使用一个非加密脚本（unscrambled loader）加载插件，这个脚本将实例或类的路径保存在模块的根结构下，可以供加密文件使用，查找到插件的根目录（base path of the plugin）。</p>
+<!--http://www.thomthom.net/thoughts/2012/09/sketchup-plugins-can-be-installed-anywhere/-->
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/06/05/2018-06-05-自定义Sketchup插件开发路径/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -338,152 +637,6 @@
 <p>通过外部文件配置插件路径的问题是，你编写的插件中不能使用<code>Sketchup.find_support_file</code>，替代方案是使用<code>__FILE__</code> 常量，<code>__FILE__</code> 保存着插件执行文件的路径和文件名。通过<code>File.dirname( __FILE__ )</code>可以获取插件执行文件的路径值。按照这种模式编写的插件，具有可移动性，可以安装在任意自定义路径下。</p>
 <p>另外需要注意的是，如果你的Ruby代码是加密脚本， <code>__FILE__</code> 就获取不到正确的文件信息，因为ruby脚本会在解码再被赋值执行。因此，我们还需要遵循另一个原则，使用一个非加密脚本（unscrambled loader）加载插件，这个脚本将实例或类的路径保存在模块的根结构下，可以供加密文件使用，查找到插件的根目录（base path of the plugin）。</p>
 <!--http://www.thomthom.net/thoughts/2012/09/sketchup-plugins-can-be-installed-anywhere/-->
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/06/05/2018-06-05-Sketchup插件开发的checklist/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zdamao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p99t48erf.bkt.clouddn.com/share/avatar-zwy.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="曾大猫的Sketchup笔记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/05/2018-06-05-Sketchup插件开发的checklist/" itemprop="url">Sketchup插件开发的checklist</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-05T21:37:42+08:00">
-                2018-06-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/06/05/2018-06-05-Sketchup插件开发的checklist/" class="leancloud_visitors" data-flag-title="Sketchup插件开发的checklist">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>ThomThom总结了他的插件开发经验，归纳成类，对插件开发很有参考价值。</p>
-<p>之前已经用单独文章说明的相关内容，本文也给出了链接地址。</p>
-<h2 id="稳定性："><a href="#稳定性：" class="headerlink" title="稳定性："></a>稳定性：</h2><ul>
-<li><a href="http://www.thomthom.net/thoughts/2012/01/golden-rules-of-sketchup-plugin-development/#never-modify-existing-base-methods-that-ships-with-sketchup" target="_blank" rel="noopener">Ensure base classes, modules and methods are not modified</a></li>
-<li><a href="http://www.thomthom.net/thoughts/2012/01/golden-rules-of-sketchup-plugin-development/#avoid-adding-methods-to-the-global-namespace" target="_blank" rel="noopener">Wrap <em>everything</em> in a unique namespace</a></li>
-<li><a href="http://www.thomthom.net/thoughts/2012/09/sketchup-plugins-can-be-installed-anywhere/" target="_blank" rel="noopener">Ensure the plugin can run from any file location</a></li>
-<li>Ensure plugins, especially beware observers, doesn’t mess up the undo stack</li>
-<li><a href="https://github.com/SketchUp/sketchup-safe-observer-events" target="_blank" rel="noopener">Ensure observers doesn’t interrupt operations</a></li>
-<li>Keep support files grouped in a folder, not flat in the Plugins root</li>
-</ul>
-<p>避免修改Sketchup内已经存在的基本类、模块和方法</p>
-<p>将代码包裹在唯一的命名空间中</p>
-<p>确保插件能够在自定义目录加载</p>
-<p>确保观察者不会破坏undo操作</p>
-<p>确保观察者不会破坏操作流程</p>
-<p>不要将插件用到的支持文件放置到根目录下，应该统一放在子文件夹下</p>
-<h2 id="行为"><a href="#行为" class="headerlink" title="行为"></a>行为</h2><!--http://www.thomthom.net/thoughts/2013/02/sketchup-plugin-checklist/-->
           
         
       
@@ -1316,7 +1469,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
