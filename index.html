@@ -249,6 +249,142 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/06/23/2018-06-21-如何不重启Sketchup调试插件代码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zdamao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://p99t48erf.bkt.clouddn.com/share/avatar-zwy.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="曾大猫的Sketchup笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/23/2018-06-21-如何不重启Sketchup调试插件代码/" itemprop="url">2018-06-21-如何不重启Sketchup调试插件代码</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-23T11:16:58+08:00">
+                2018-06-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/06/23/2018-06-21-如何不重启Sketchup调试插件代码/" class="leancloud_visitors" data-flag-title="2018-06-21-如何不重启Sketchup调试插件代码">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>开发Sketchup插件时需要反复调试代码，如果每次都需要重启Sketchup才能看到效果，浪费时间。</p>
+<p>在插件中增加一个工具方法，通过Sketchup内置的Console运行该方法，就可以不用启动Sketchup就重新加载插件了。</p>
+<p>举例，以我的名字(Zdamao)命名的模块下，有一个的HelloCube模块</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">require <span class="string">'sketchup.rb'</span></span><br><span class="line"></span><br><span class="line">module Zdamao</span><br><span class="line">  module HelloCube</span><br><span class="line"></span><br><span class="line">    <span class="comment"># create_cube方法建立一个立方体</span></span><br><span class="line">    def self.create_cube</span><br><span class="line">    </span><br><span class="line">      model = Sketchup.active_model</span><br><span class="line">      model.start_operation(<span class="string">'Create Cube'</span>, <span class="literal">true</span>)</span><br><span class="line">      group = model.active_entities.add_group</span><br><span class="line">      entities = group.entities</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 建立4个点</span></span><br><span class="line">      points = [</span><br><span class="line">        Geom::Point3d.new(0,   0,   0),</span><br><span class="line">        Geom::Point3d.new(1.m, 0,   0),</span><br><span class="line">        Geom::Point3d.new(1.m, 1.m, 0),</span><br><span class="line">        Geom::Point3d.new(0,   1.m, 0)</span><br><span class="line">      ]</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 建立面</span></span><br><span class="line">      face = entities.add_face(points)</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 拉升</span></span><br><span class="line">      face.pushpull(-1.m)</span><br><span class="line"></span><br><span class="line">      model.commit_operation</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 建立命令菜单</span></span><br><span class="line">    unless file_loaded?(__FILE__)</span><br><span class="line"></span><br><span class="line">      menu = UI.menu(<span class="string">'Plugins'</span>)</span><br><span class="line"></span><br><span class="line">      menu.add_item(<span class="string">'Create Cube Example by zdamao'</span>) &#123;</span><br><span class="line">        self.create_cube</span><br><span class="line">      &#125;</span><br><span class="line">      file_loaded(__FILE__)</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 避免重启Sketchup,重新加载插件的工具方法</span></span><br><span class="line">    def self.reload</span><br><span class="line">      original_verbose = <span class="variable">$VERBOSE</span></span><br><span class="line">      <span class="variable">$VERBOSE</span> = nil</span><br><span class="line">      pattern = File.join(__dir__, <span class="string">'**/*.rb'</span>)</span><br><span class="line">      Dir.glob(pattern).each &#123; |file|</span><br><span class="line">        <span class="comment"># Cannot use `Sketchup.load` because its an alias for `Sketchup.require`.</span></span><br><span class="line">        load file</span><br><span class="line">      &#125;.size</span><br><span class="line">    ensure</span><br><span class="line">      <span class="variable">$VERBOSE</span> = original_verbose</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">  end <span class="comment"># module HelloCube</span></span><br><span class="line">end <span class="comment"># module Zdamao</span></span><br></pre></td></tr></table></figure>
+<p>在Sketchup内置console中，运行reload方法（Zdamao:HelloCube.reload），成功重载插件。</p>
+<p>欧耶！</p>
+<!--https://github.com/SketchUp/sketchup-ruby-api-tutorials/wiki/Development-Setup/-->
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://cgclip.com/2018/06/20/2018-06-05-Sketchup插件开发的checklist/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1480,7 +1616,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
